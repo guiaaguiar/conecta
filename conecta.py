@@ -68,8 +68,15 @@ def executa_comandos():
         comandos = {
             'coreto': ("http://coreto.recife.pe.gov.br", "Aqui está o que encontrei sobre Coreto."),
             'conecta recife': ("http://conecta.recife.pe.gov.br", "Aqui está o que encontrei sobre Conecta Recife."),
+            'conectar recife': ("http://conecta.recife.pe.gov.br", "Aqui está o que encontrei sobre Conecta Recife."),
             'go recife': ("http://gorecife.recife.pe.gov.br", "Aqui está o que encontrei sobre o Go Recife."),
-            'edit ai': ("http://editai.recife.pe.gov.br", "Aqui está o que encontrei sobre o Edit Ai.")
+            'gol recife': ("http://gorecife.recife.pe.gov.br", "Aqui está o que encontrei sobre o Go Recife."),
+            'edit ai': ("http://editai.recife.pe.gov.br", "Aqui está o que encontrei sobre o Edit Ai."),
+            'edit aí': ("http://editai.recife.pe.gov.br", "Aqui está o que encontrei sobre o Edit Ai."),
+            'edite aí': ("http://editai.recife.pe.gov.br", "Aqui está o que encontrei sobre o Edit Ai."),
+            'edite ai': ("http://editai.recife.pe.gov.br", "Aqui está o que encontrei sobre o Edit Ai."),
+            'edith aí': ("http://editai.recife.pe.gov.br", "Aqui está o que encontrei sobre o Edit Ai."),
+            'edith ai': ("http://editai.recife.pe.gov.br", "Aqui está o que encontrei sobre o Edit Ai."),
         }
 
         while True:
