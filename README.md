@@ -63,8 +63,8 @@
 
 As dependências do projeto estão listadas no arquivo `requirements.txt`:
 ```
-SpeechRecognition==3.8.1
-pygame==2.3.0
-gTTS==2.3.2
-openai==0.27.0
+SpeechRecognition==3.12.0
+pygame==2.6.1
+gTTS==2.5.4
+openai==0.28.0
 ```
