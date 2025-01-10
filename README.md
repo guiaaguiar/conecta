@@ -1,33 +1,47 @@
-# Conecta - Assistente Virtual
+# Conecta - Assistente Virtual da Prefeitura do Recife
 
-Conecta é uma assistente virtual desenvolvida para ouvir comandos de voz, processá-los e executar ações como abrir páginas da web ou responder com mensagens de áudio. Este projeto utiliza Python e bibliotecas como `speech_recognition`, `pygame` e `gTTS` para oferecer uma experiência interativa ao usuário.
+**Conecta** é um assistente virtual desenvolvido para auxiliar os cidadãos de Recife, oferecendo informações rápidas e acessíveis sobre serviços municipais e outras consultas gerais. Ele utiliza reconhecimento de fala, síntese de voz e integração com o ChatGPT para criar uma interação amigável e eficiente.
+
+---
 
 ## Funcionalidades
 
-1. **Reconhecimento de Fala**:
-   - Escuta comandos de voz continuamente e reconhece palavras-chave.
-   - Suporte para a linguagem portuguesa (pt-BR).
+- **Reconhecimento de fala em tempo real**: Identifica e interpreta comandos de voz em português.
+- **Execução de comandos específicos**:
+  - Acesso a serviços como Coreto, Conecta Recife, Edit Ai, e outros portais relevantes.
+- **Respostas dinâmicas**: Consulta o ChatGPT para responder perguntas gerais.
+- **Sintetização de voz**: Responde ao usuário com mensagens audíveis em português.
+- **Desligamento por comando de voz**: O assistente pode ser encerrado ao ouvir o comando "desligar".
 
-2. **Respostas em Áudio**:
-   - Gera respostas em áudio utilizando a biblioteca `gTTS`.
+---
 
-3. **Execução de Comandos**:
-   - Abre páginas da web com base em palavras-chave específicas.
+## Como Funciona
 
-4. **Desligamento por Comando**:
-   - Desativa o assistente ao detectar o comando "desligar".
+1. **Reconhecimento de Fala**: O assistente escuta comandos usando a biblioteca `SpeechRecognition`.
+2. **Processamento de Comandos**: Identifica comandos específicos e realiza ações predefinidas, como abrir sites ou gerar respostas.
+3. **Consulta ao ChatGPT**: Para perguntas não relacionadas a comandos, o assistente interage com a API do OpenAI.
+4. **Resposta Audível**: A resposta é sintetizada em áudio utilizando a biblioteca `gTTS` e reproduzida via `pygame`.
 
-## Pré-requisitos
+---
 
-Antes de executar o projeto, certifique-se de ter o Python instalado em sua máquina. É recomendável usar um ambiente virtual para gerenciar as dependências.
+## Tecnologias Utilizadas
 
-## Instalação
+- **Linguagem**: Python
+- **Bibliotecas**:
+  - [SpeechRecognition](https://pypi.org/project/SpeechRecognition/): Reconhecimento de fala.
+  - [gTTS](https://pypi.org/project/gTTS/): Geração de áudio para respostas.
+  - [Pygame](https://www.pygame.org/): Reprodução de áudio.
+  - [OpenAI API](https://platform.openai.com/): Integração com ChatGPT.
+  - [Webbrowser](https://docs.python.org/3/library/webbrowser.html): Navegação web.
 
-1. Clone o repositório:
+---
+
+## Como Executar o Projeto
+
+1. **Clone o Repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
-   ```
+   git clone https://github.com/seu-usuario/conecta-assistente.git
+   cd conecta-assistente
 
 2. Crie um ambiente virtual e ative-o:
    ```bash
@@ -41,35 +55,17 @@ Antes de executar o projeto, certifique-se de ter o Python instalado em sua máq
    pip install -r requirements.txt
    ```
 
-## Uso
-
-1. Execute o programa:
+4. Execute o assistente:
    ```bash
    python conecta.py
    ```
-
-2. O assistente irá saudar você e começará a escutar comandos. Exemplos de comandos suportados:
-   - "Coreto"
-   - "Conecta Recife"
-   - "Go Recife"
-   - "Desligar" (para encerrar o assistente)
-
-3. Caso um comando válido seja reconhecido, a página correspondente será aberta no navegador e uma resposta será gerada em áudio.
-
-## Personalização
-
-Você pode adicionar mais comandos personalizando o dicionário na função `processa_comando` no arquivo `conecta.py`:
-```python
-comandos = {
-    'novo comando': ("http://link.com", "Mensagem de resposta."),
-}
-```
 
 ## Arquivo `requirements.txt`
 
 As dependências do projeto estão listadas no arquivo `requirements.txt`:
 ```
-gTTS==2.2.3
-pygame==2.1.2
 SpeechRecognition==3.8.1
+pygame==2.3.0
+gTTS==2.3.2
+openai==0.27.0
 ```
