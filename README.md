@@ -7,8 +7,7 @@
 ## Funcionalidades
 
 - **Reconhecimento de fala em tempo real**: Identifica e interpreta comandos de voz em português.
-- **Execução de comandos específicos**:
-  - Acesso a serviços como Coreto, Conecta Recife, Edit Ai, e outros portais relevantes.
+- **Execução de comandos específicos**: Acesso a serviços como Coreto, Conecta Recife, Edit Ai, e outros portais relevantes.
 - **Respostas dinâmicas**: Consulta o ChatGPT para responder perguntas gerais.
 - **Sintetização de voz**: Responde ao usuário com mensagens audíveis em português.
 - **Desligamento por comando de voz**: O assistente pode ser encerrado ao ouvir o comando "desligar".
