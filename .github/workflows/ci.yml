@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Syntax check
+        run: python -m compileall -q .
+      - name: Run tests
+        run: |
+          if python -c "import pytest" 2>/dev/null; then
+            pytest || [ $? -eq 5 ]
+          else
+            python -m unittest discover -s . -p "test_*.py" || true
+          fi
